@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+:root{
+    --secondary: #2B2B2B;
+    --primary: #ffff;
+    --dark:  #000;
+    --highlight: #dd8b30;
+    --height: 100vh;
+    --heading-text:'Inter Tight', sans-serif;
+    --small-heading: 'Noto Sans', sans-serif;
+    --content-text: 'Raleway', sans-serif;
+}
+body{
+    height: auto;
+    overflow-x: hidden;
+    background-color: var(--dark);
+}
+nav{
+    height: 3.5rem;
+    min-width: 100%;
+    background: #000000dc;
+    color: var(--primary);
+    position: sticky;
+    top: 0;
+    padding: 0 10%;
+    z-index: 5;
+}
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 2rem;
+    padding: .9rem 0;
+}
+nav ul li{
+    display: flex;
+    justify-content: center;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--foreground);
+    position: relative;
+    font-family: var(--small-heading);
+    transition: .3s ease-in-out;
+}
+nav ul li a:hover{
+    color: var(--highlight);
+    transform: scale(1.01);
+}
+.divide{
+    display: none;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    height: var(--height);
+}
+#home::before{
+    content: '';
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+   background: url('https://wallpapercosmos.com/w/full/9/d/4/8968-2800x1120-desktop-dual-screen-jeff-bezos-wallpaper-image.jpg');
+   background-size: cover;
+   background-position: center;
+   z-index: -1;
+}
+.main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    row-gap: .1rem;
+}
+.main>h1{
+    font-family: var(--heading-text);
+    font-size: 4rem;
+    color: var(--primary);
+    color: #dd8b30;
+
+}
+.main>p{
+    font-family: var(--small-heading);
+    font-size: 1rem;
+    padding: 0 2rem;
+    color: var(--primary);
+
+}
+.main>p>span>a{
+    position: relative;
+    top: .5rem;
+}
+.main>p>span>a>img{
+    max-width: 4.5rem;
+    margin: 0 .5rem;
+    
+}
+#about{
+    background: var(--dark);
+}
+.heading{
+    color: var(--primary);
+    text-align: center;
+    padding-top: 6%;
+    font-family: var(--small-heading);
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    
+}
+.Aboutcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60vh;
+    column-gap: 4%;
+    padding: 0 5%;
+    margin:0% 0 ;
+    /* background: var(--primary);   */
+}
+.imgcontainerAbout{
+    max-width: 20rem;
+    max-height: 13rem;
+    border-radius: 0.5rem;
+    /* border: 1px solid #ffff; */
+    background: rgba(85, 85, 85, 0.322);
+    transition: 1s ease-in-out;
+    /* animation: move 2s ease-in-out infinite alternate; */
+    }
+.imgcontainerAbout>img{
+    width: 100%;
+    border-radius: .5rem;
+    transform: translate(-.7rem, -01.5ex); 
+      
+}
+.imgcontainerAbout>img:hover{
+    transform: translate(0rem, 0ex);    
+}
+.Aboutcontainer>p{
+    color: var(--primary);
+    font-family: var(--content-text);
+    text-align: justify;
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+}
+.Aboutcontainer>p>span{
+    color: var(--primary);
+    margin: .5rem 0;
+    font-size: 1.3rem;
+}
+
+
+#projects{
+    height: var(--height);
+    background: var(--dark);
+}
+.projectsrow{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 5rem;
+    height: 30.5rem;
+}
+.projectscol{
+    width: 15rem;
+    background: var(--secondary);
+    border-radius: .3rem;
+    overflow: hidden;
+    background: linear-gradient(to top,#dd8b30 50%,#2B2B2B 50%);
+    background-size: 100% 200%;
+    transition: all 0.8s;
+
+}
+.projectscol:hover{
+    border: none;
+    background-position: left bottom;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.392);
+    color: #ebebeb;
+}
+
+.projectscol>img{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+}
+.projectscol>h1{
+    font-family: var(--small-heading);
+    background: #0000003d;
+    color: var(--primary);
+    font-weight: 600;
+    text-align: center;
+    padding: 0.4rem;
+    margin: .5rem;
+}
+.projectscol>p{
+    display: flex;
+    text-align: justify;
+    display: flex;
+    padding: 0 .8rem;
+    font-family: var(--content-text);
+    font-weight: 100;
+    font-size: .95rem;
+    color: var(--primary);
+}
+
+
+#awards{
+    background: var(--dark);
+    height: var(--height);
+}
+.achrow{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 5rem;
+}
+.achcol{
+    width: 15rem;
+    height: 20rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.57);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.achcol>img{
+    width: 5rem;
+    position: absolute;
+    left: 33%;
+    top: -7%;
+    opacity: .8;
+    filter: contrast(10);
+    filter: grayscale(.4);
+}
+.achcol>h1{
+    font-family: var(--small-heading);
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--highlight);
+    filter: hue-rotate(15deg);
+    opacity: 0.9;
+    font-size: 1.2rem;
+
+    
+}
+.achcol>hr{
+    margin-top: .5rem;
+    height: 1px;
+    margin-left: 5%;
+    border: 1px solid rgb(66, 66, 66);
+}
+.achcol>p{
+    font-family: var(--content-text);
+    margin-top: 1rem;
+    height: 60%;
+    color: var(--primary);
+    opacity: .8;
+    font-size: .9rem;
+    line-height: 1.3rem;
+}
+
+#contact{
+    height: var(--height);
+    background: var(--dark);
+}
+.formcontainer{
+    min-height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.formcontainer>form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    row-gap: 1rem;
+    position: relative;
+    left: 30%;
+    padding-top: 2%;
+    /* position: absolute; */
+    /* right: -5%;
+    top: 50%; */
+}
+.formcontainer>form>.input{
+    width: 100%; 
+    min-height: 2.4rem;
+    border: .1px solid rgba(255, 255, 255, 0.167);
+    outline: none;
+    background: rgba(128, 128, 128, 0.16);
+}
+.formcontainer>form>.input:focus{
+    background: rgba(128, 128, 128, 0.252);   
+}
+.input::placeholder{
+    padding: 1rem;
+}
+.formcontainer>form>button{
+    width: 100%; 
+    min-height: 2.4rem;
+    border: 0;
+    outline: none;
+    background: var(--highlight);
+    color: var(--primary);
+}
+.formcontainer>form>button:hover,.formcontainer>form>button:focus{
+    background: #dd8c3081;
+}
+.formcontainer>.contactdetails{
+    /* text-align: center; */
+    /* padding: 4% 0 0 0; */
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+}
+.formcontainer>.contactdetails>h2{
+    color: var(--primary);
+    font-family: var(--content-text);
+    font-size: .8rem;
+    font-weight: 100;
+    margin: 1rem 1rem;
+    filter: grayscale(10);
+}
+/* .formcontainer>.contactdetails>iframe{
+   transform: scale(.9);
+    margin: 1rem ;
+} */
+
+@media screen and (max-width: 480px) {
+    *{
+        /* outline: 2px solid yellow; */
+        overflow-x: hidden;
+    }
+    
+    body{
+        width: 100%;
+        overflow-x: hidden;
+        background: #000;
+    }
+    .heading{
+        padding: 0;
+        margin: 1.5rem 0;
+        color: #f5f5f7;
+    }
+    Nav{
+        width: 100%;
+        padding: 0 3px;
+        top: 0;
+        left: 0;
+        position: sticky;
+        z-index: 10;
+        }
+
+    nav ul{
+        justify-content: center;
+        column-gap: 1.5rem;
+    }
+    nav ul li a{
+        font-size: 12px;
+    }
+    .divide{
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-top: 3rem;
+        border:1px solid #2b2b2b6d;
+    }
+    
+    #home:before{
+        width: 100%;
+        height: 100vh;
+        background-position:65%;
+        background-size: cover;
+        opacity: .3;
+    }
+    .main{
+        left: 5%;
+    }
+    .main>h1{
+        text-align: center;
+        width: 70%;
+        overflow-y: hidden;
+        position: relative;
+        left: 13%;
+        line-height: 90%;
+    }
+    .main p{
+        text-align: center;
+    }
+    .main p>span>a>img{
+        margin-left: -2%;
+        scale: .75;
+        left: 0;
+    }
+    .Aboutcontainer{
+        height: auto;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    .imgcontainerAbout{
+        background: transparent;
+        border-radius: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .imgcontainerAbout>img{
+        transform:translate(0);
+        border-radius: .5rem;
+        width: 80%;
+    }
+    .Aboutcontainer>P{
+        font-size: .9rem;
+        padding: 0 1rem;
+        text-align: left;
+        color: #f5f5f7de;
+    }
+    #projects{
+        height: auto;
+    }
+    .projectsrow{
+        flex-direction: column;
+        height: auto;
+        row-gap: 1.3rem;
+        padding: 0;
+    }
+    .projectscol{
+        margin-left: 10%;
+        width: 80%;
+    }
+    .projectscol>img{
+        height: 9rem;
+    }
+    .projectscol>p{
+        font-size: .9rem;
+        padding: 1rem;
+    }
+    #awards{
+        height: auto;
+    }
+    .achrow{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        width: 100%;
+        padding: 0;
+    }
+    .achcol{
+        left: 5%;
+        height: auto;
+       width: 90%;
+        position: relative;
+        padding: 0rem .5rem;
+        row-gap: .9rem;
+        background: #0d0d0d89;
+        border: 1px solid #2B2B2B;
+    }
+    .achcol>h1{
+        font-size: 1rem;
+        color: #dd8b30;
+    }
+    .achcol>img{
+        position: relative;
+        top: 0;
+        width: 5rem;
+        display: none;
+    }
+    .achcol>hr{
+        margin-top: 1rem;
+    }
+    .achcol>p{
+        text-align: justify;
+        padding: 1rem;
+        padding-top: 0rem ;
+        /* display: none; */
+    }
+    #contact{
+        height: auto;
+    }
+    .formcontainer>form{
+        padding: 0 1rem;
+        left: 0;
+        width: 100%;
+    }
+  }
